@@ -7,7 +7,8 @@ As described in the paper, the network architecture consists of a contracting pa
 The contracting path consisting of repeated application of two 3x3 unpadded convolution layers each consisting of a 2x2 max pooling with stride 2 after the convolution layer. After each downsampling, we double the number of feature channels. <br>
 The expansive path consists of an upsampling of the feature map which is followed by a 2x2 up-convolution to half the number of feature channels, a concatenation with the correspondingly cropped feature map from the contracting path at each level, and two 3x3 convolutions, each convolution layer followed by a ReLU. <br>
 The upsampling is followed by a final 1x1 convolution layer to map the 64-component vector to the desired number of classes. Totally, 23 convolution layers are used in the architecture. 
-![image](https://user-images.githubusercontent.com/53568572/132100326-9622f3f9-4a45-4b52-8ee4-ff53ff157f6a.png)
+![u-net architecture](https://user-images.githubusercontent.com/53568572/132100531-846ea4b4-f997-4eb9-b5ec-82e0c150b25b.png)
+
 <b>Image Source:</b> U-Net: Convolutional Networks for Biomedical Image Segmentation <br><br>
 For a seamless tiling of the segmentation map(output) the authors make it a point that the input tile size is such that the 2x2 max-pooling operations are applied to a layer with an even x- and y- size.
 
