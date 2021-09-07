@@ -13,7 +13,7 @@ from tensorflow.keras.callbacks import (
 )
 
 if __name__ == "__main__":
-    # Defining model hyper parameters
+    # Defining model parameters
     dataset_path = "people_segmentation"
     input_shape = (256, 256, 3)
     batch_size = 8
