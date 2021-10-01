@@ -1,16 +1,10 @@
 import os
-
-#os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 import numpy as np
 import tensorflow as tf
 from model import build_unet
 from dataset import load_data, tf_dataset
-from tensorflow.keras.callbacks import (
-    ModelCheckpoint,
-    ReduceLROnPlateau,
-    CSVLogger,
-    EarlyStopping,
-)
+from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau
+from tensorflow.keras.callbacks import CSVLogger, EarlyStopping
 
 if __name__ == "__main__":
     # Defining model parameters
